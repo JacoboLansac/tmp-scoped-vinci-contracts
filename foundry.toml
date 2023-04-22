@@ -1,0 +1,22 @@
+[profile.default]
+#src = 'contracts'
+#out = 'foundry/out'
+#test = 'foundry/test'
+#libs = ['foundry/lib']
+#broadcast = 'foundry/broadcast'
+
+remappings=[
+    "@openzeppelin/=lib/ooopenzeppelin-contracts/",
+    "@forge=lib/forge-std/",
+]
+
+
+[invariant]
+fail_on_revert = true
+runs = 256      # Number of runs of the each invariant test session
+depth = 256     # How many calls to the contract can be made in each invariant session
+
+
+#gas_reports = ["BareStaking"]
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
